@@ -1,0 +1,172 @@
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+body
+{
+  background-color: rgba(250, 148, 101);  
+}
+
+
+img {
+  border: 5px;
+  border-radius: 45%;
+  padding: 10px;
+  width: 100px;
+}
+
+/* Header/Logo Title */
+.header {
+ background-color: rgba(250, 148, 101);
+  padding: none;
+  text-align: center;
+  color: white;
+  font-size: 22px;
+}
+
+
+ul.breadcrumb {
+  padding: 4px;
+  list-style: none;
+  background-color: rgba(250, 148, 101);
+  text-align: center; 
+}
+ul.breadcrumb li {
+  display: inline;
+  font-size: 22px;
+}
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: white;
+  content: "/\00a0";
+}
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: none;
+}
+
+a {
+  color: white;
+ text-decoration: none;
+}
+
+/* Create 2 equal columns that float next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 0px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the 2 columns stack on top of each other instead of next to each other */
+@media screen and (max-width:500px) {
+  .column {
+    width: 100%;
+  }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 48% 48%;
+  grid-template-rows: 240px 240px 240px;
+  background-color: rgba(250, 148, 101);
+  padding: 1px;
+  border-radius: 20%;
+}
+
+.grid-container > div {
+	background-color: rgba(250, 148, 101, 0.3);
+  	animation: colorchange 166s linear 1s infinite; 
+ 	-webkit-animation: colorchange 166s linear 0s infinite alternate; 
+  	text-align: center;
+  	padding: 4px 4px 4px 4px;
+  	font-size: 16px;
+  	border-radius: 20%;
+}
+
+@keyframes colorchange
+    {
+      0%   {background: salmon; color: cyan;}
+      33%  {background: green; color: magenta;}
+      66%  {background: lightblue; color: yellow;}
+      100% {background: red; color: cyan;}
+   }
+
+    @-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+    {
+      0%   {background: salmon; color: cyan;}
+      33%  {background: green; color: magenta;}
+      66%  {background: lightblue; color: yellow;}
+      100% {background: lightsalmon; color: cyan;}
+   }
+
+@keyframes move {
+  0% {
+    transform: translate(-30%, 0);
+  }
+  50% {
+    text-shadow: 0 25px 50px rgba(0, 0, 0, 0.75);
+  }
+  100% {
+    transform: translate(30%, 3);
+  }
+}
+
+.words {
+  color: white;
+  font-size: 6px;
+  line-height: 0.6;
+}
+
+.words span {
+  font-size: 4rem;
+  display: inline-block;
+  animation: move 12s;
+animation-iteration-count: 3;
+}
+
+.words span:nth-child(2) {
+  animation-delay: 0.9s;
+}
+
+.words span:nth-child(3) {
+  animation-delay: 4s;
+}
+
+.words span:nth-child(4) {
+  animation-delay: 6s;
+}
+
+.words span:nth-child(5) {
+  animation-delay: 8s;
+}
+
+
+
+
+/* Style the footer */
+footer {
+  background-color: rgba(265, 148, 101, 0.3);
+  padding: 16px;
+  text-align: left;
+  font-size: 8px;
+  color: white;	
+  bottom: 3px;
+}
+
